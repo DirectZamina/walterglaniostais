@@ -206,7 +206,7 @@
 // EmailJs
 
  (function() {
-    // Initialise EmailJS avec ta clé publique
+    // Initialise EmailJS avec la clé publique
     emailjs.init("u18uBDAWSgYhV2Chs"); // remplace par ta clé publique
   })();
 
@@ -214,7 +214,7 @@
     event.preventDefault();
 
     // Envoi via EmailJS
-    emailjs.send("service_l91hnyg", "template_2s9ykvp", {
+    emailjs.send("service_l91hnyg", "template_r8qr1vy", {
       from_name: document.getElementById("from_name").value,
       from_email: document.getElementById("from_email").value,
       from_subject: document.getElementById("from_subject").value,

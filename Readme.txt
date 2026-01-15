@@ -8,7 +8,7 @@ License: https://bootstrapmade.com/license/
 
 EmailJs:
 
-TemplateId : template_2s9ykvp
+TemplateId : template_r8qr1vy
 Service Id : service_l91hnyg
 Private Key : VyXqnz4BkUdSsq6nerl7P
 Public Key : u18uBDAWSgYhV2Chs
