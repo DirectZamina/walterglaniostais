@@ -25,6 +25,7 @@
   --accent-color: #1387c1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #141f26; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --fluor-color: #4FBFF7 ;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -574,6 +575,24 @@ h6 {
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
+}
+
+.buttonBTSSIO{
+  width: 170px;
+  background-color: var(--accent-color);
+  height: 50px;
+  color: black;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 45px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  transition: all 0.5s ease;
+}
+
+.buttonBTSSIO:hover{
+  scale: 1.05;
+  box-shadow: 3px 3px 3px 3px var(--fluor-color);
 }
 
 .scroll-top i {
@@ -2214,7 +2233,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
+#veille .portfolio-filters, #portfolio .portfolio-filters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -2224,8 +2243,9 @@ section,
   list-style: none;
 }
 
-.portfolio .portfolio-filters li {
+#veille .portfolio-filters li , #portfolio .portfolio-filters li{
   padding: 8px 20px;
+  /* width: 140px; */
   font-size: 0.95rem;
   font-weight: 500;
   border-radius: 30px;
@@ -2235,16 +2255,16 @@ section,
   color: var(--accent-color);
 }
 
-.portfolio .portfolio-filters li:hover {
+#veille .portfolio-filters li:hover , #portfolio .portfolio-filters li:hover{
   background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.portfolio .portfolio-filters li.filter-active {
+#veille .portfolio-filters li.filter-active, #portfolio .portfolio-filters li.filter-active {
   background-color: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.portfolio .portfolio-card {
+#veille .portfolio-card, #portfolio .portfolio-card {
   background-color: var(--surface-color);
   border-radius: 10px;
   overflow: hidden;
@@ -2253,31 +2273,31 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-card:hover {
+#veille .portfolio-card:hover, #portfolio .portfolio-card:hover{
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio .portfolio-card:hover .portfolio-img .portfolio-overlay {
+#veille .portfolio-card:hover .portfolio-img .portfolio-overlay, #portfolio .portfolio-card:hover .portfolio-img .portfolio-overlay {
   opacity: 1;
 }
 
-.portfolio .portfolio-card:hover .portfolio-img img {
+#veille .portfolio-card:hover .portfolio-img img, #portfolio .portfolio-card:hover .portfolio-img img {
   transform: scale(1.1);
 }
 
-.portfolio .portfolio-card .portfolio-img {
+#veille .portfolio-card .portfolio-img, #portfolio .portfolio-card .portfolio-img {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio .portfolio-card .portfolio-img img {
+#veille .portfolio-card .portfolio-img img, #portfolio .portfolio-card .portfolio-img img {
   width: 100%;
   height: auto;
   transition: transform 0.5s ease;
 }
 
-.portfolio .portfolio-card .portfolio-img .portfolio-overlay {
+#veille .portfolio-card .portfolio-img .portfolio-overlay, #portfolio .portfolio-card .portfolio-img .portfolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -2292,7 +2312,7 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-card .portfolio-img .portfolio-overlay a {
+#veille .portfolio-card .portfolio-img .portfolio-overlay a, #portfolio .portfolio-card .portfolio-img .portfolio-overlay a {
   width: 45px;
   height: 45px;
   background-color: var(--accent-color);
@@ -2305,35 +2325,35 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-card .portfolio-img .portfolio-overlay a:hover {
+#veille .portfolio-card .portfolio-img .portfolio-overlay a:hover, #portfolio .portfolio-card .portfolio-img .portfolio-overlay a:hover {
   background-color: color-mix(in srgb, var(--accent-color), #fff 20%);
   transform: translateY(-5px);
 }
 
-.portfolio .portfolio-card .portfolio-info {
+#veille .portfolio-card .portfolio-info, #portfolio .portfolio-card .portfolio-info {
   padding: 20px;
 }
 
-.portfolio .portfolio-card .portfolio-info h4 {
+#veille .portfolio-card .portfolio-info h4, #portfolio .portfolio-card .portfolio-info h4 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 5px;
   color: var(--heading-color);
 }
 
-.portfolio .portfolio-card .portfolio-info p {
+#veille .portfolio-card .portfolio-info p, #portfolio .portfolio-card .portfolio-info p {
   font-size: 0.9rem;
   color: var(--default-color);
   margin-bottom: 10px;
 }
 
-.portfolio .portfolio-card .portfolio-info .portfolio-tags {
+#veille .portfolio-card .portfolio-info .portfolio-tags, #portfolio .portfolio-card .portfolio-info .portfolio-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.portfolio .portfolio-card .portfolio-info .portfolio-tags span {
+#veille .portfolio-card .portfolio-info .portfolio-tags span, #portfolio .portfolio-card .portfolio-info .portfolio-tags span {
   font-size: 0.8rem;
   padding: 4px 12px;
   border-radius: 20px;
@@ -2341,7 +2361,7 @@ section,
   color: var(--accent-color);
 }
 
-.portfolio .btn-primary {
+#veille .btn-primary, #portfolio .btn-primary {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
@@ -2351,7 +2371,7 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .btn-primary:hover {
+#veille .btn-primary:hover, #portfolio .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), #000 10%);
   border-color: color-mix(in srgb, var(--accent-color), #000 10%);
   transform: translateY(-3px);
