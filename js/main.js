@@ -181,6 +181,7 @@
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
+        console.log('Bouton cliqué !');
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
