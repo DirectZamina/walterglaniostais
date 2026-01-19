@@ -591,8 +591,12 @@ h6 {
 }
 
 .buttonBTSSIO:hover{
-  scale: 1.05;
-  box-shadow: 3px 3px 3px 3px var(--fluor-color);
+  transform: translateX(10px);
+  scale: 1.05; 
+    /* Ombre diffuse sans contour dur */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 
+                0 0 15px var(--fluor-color);
+    cursor: pointer;
 }
 
 .scroll-top i {
@@ -2884,3 +2888,43 @@ section,
 /*.starter-section {
   /* Add your styles here 
 }*/
+
+/* Style pour les badges de technologies */
+.skills-used .badge {
+  padding: 10px 15px;
+  font-weight: 500;
+  margin-right: 5px;
+  background-color: #f4f4f4 !important;
+  color: var(--accent-color); /* Ta couleur d'accent */
+  border: 1px solid #ddd;
+}
+
+/* On réutilise ton bouton personnalisé */
+.buttonBTSSIOStage {
+  background-color: var(--accent-color);
+  height: 45px;
+  color: black;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 45px;
+  width: 100%; /* Largeur pleine dans la petite colonne */
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-info ul li {
+  padding-bottom: 10px;
+}
