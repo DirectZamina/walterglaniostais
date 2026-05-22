@@ -227,6 +227,6 @@
       document.getElementById("contact-form").reset();
     }, function(error) {
       document.getElementById("form-status").innerHTML =
-        '<div class="alert alert-danger">❌ Erreur lors de l’envoi : ' + JSON.stringify(error) + '</div>';
+        `<div class="alert alert-danger">❌ Erreur lors de l\'envoi : ${JSON.stringify(error)} </div>`;
     });
   });
