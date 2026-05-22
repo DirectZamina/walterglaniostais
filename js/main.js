@@ -205,7 +205,7 @@
 })();
 
 // EmailJs
-
+/*
  (function() {
     // Initialise EmailJS avec la clé publique
     emailjs.init("u18uBDAWSgYhV2Chs"); // remplace par ta clé publique
@@ -230,3 +230,49 @@
         `<div class="alert alert-danger">❌ Erreur lors de l\'envoi : ${JSON.stringify(error)} </div>`;
     });
   });
+  */
+
+  // EmailJS - Version debug
+(function() {
+  try {
+    emailjs.init("u18uBDAWSgYhV2Chs");
+    console.log("✅ EmailJS initialisé");
+  } catch(e) {
+    console.error("❌ Erreur init EmailJS:", e);
+  }
+})();
+
+const contactForm = document.getElementById('contact-form');
+
+if (!contactForm) {
+  console.error("❌ Formulaire introuvable !");
+} else {
+  console.log("✅ Formulaire trouvé, addEventListener enregistré");
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log("✅ Submit intercepté");
+
+    const data = {
+      from_name:    document.getElementById("from_name")?.value,
+      from_email:   document.getElementById("from_email")?.value,
+      from_subject: document.getElementById("from_subject")?.value,
+      message:      document.getElementById("message")?.value
+    };
+
+    console.log("📦 Données à envoyer :", data);
+
+    emailjs.send("service_l91hnyg", "template_r8qr1vy", data)
+      .then(function(response) {
+        console.log("✅ Email envoyé !", response);
+        document.getElementById("form-status").innerHTML =
+          '<div class="alert alert-success">✅ Message envoyé avec succès !</div>';
+        contactForm.reset();
+      }, function(error) {
+        console.error("❌ Erreur envoi :", error);
+        document.getElementById("form-status").innerHTML =
+          `<div class="alert alert-danger">❌ Erreur lors de l'envoi : ${JSON.stringify(error)}</div>`;
+      });
+  });
+}
